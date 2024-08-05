@@ -1,0 +1,129 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary-2: #ca425f;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// COLOR VARIABLES
+$boxshadow-dark-1: 0 2rem 5rem rgba(#222, 0.15);
+$boxshadow-light-1: 0 2rem 5rem rgba(#222, 0.5);
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+// PADDING
+$padding: var(--gap-sm) var(--gap-md);
+
+// CUBIC EASING
+$ez-bz: cubic-bezier(0.2, 0, 0.4, 1);
+
+// BREAK POINTS
+$breakpoints: (
+	"xxxlarge": 90em,
+	"xxlarge": 75em,
+	"xlarge": 57.5em,
+	"large": 45.25em,
+
+);
+
+/* Reset margin, padding, and box-sizing for all elements */
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: $font-primary;
+	color: $color-grey-dark-2;
+	font-weight: 300;
+
+	box-sizing: border-box;
+
+	@include respond-to(xxlarge) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-size: 1.4rem;
+	line-height: 1.4;
+}
+
+/* Improve image styling */
+img {
+	border-style: none;
+	width: 100%;
+	height: auto;
+	display: block;
+
+	user-select: none;
+	pointer-events: none;
+}
+
+/* Reset links */
+a {
+	background-color: transparent;
+	text-decoration: none;
+	color: inherit; /* Use the parent element's color */
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* Forms */
+button,
+input,
+label,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* Use the parent's font family */
+}
+
+.container {
+	display: grid;
+	margin: 0 auto;
+	grid-template-columns:
+		[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+		[center-start]
+		repeat(8, [col-start] minmax(min-content, 15rem) [col-end])
+		[center-end]
+		minmax(6rem, 1fr) [full-end];
+	grid-template-rows: auto auto minmax(min-content, 40vw) repeat(3, auto);
+
+	@include respond-to("xlarge") {
+		grid-template-columns:
+			[ full-start] minmax(6rem, 1fr)
+			[center-start]
+			repeat(8, [col-start] minmax(min-content, 15rem) [col-end])
+			[center-end]
+			minmax(6rem, 1fr) [full-end];
+
+		grid-template-rows: 6rem auto auto minmax(min-content, 40vw) repeat(3, auto);
+	}
+}
+
+/* Reset margin, padding, and box-sizing for all elements */
+@keyframes marquee {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}

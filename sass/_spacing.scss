@@ -1,0 +1,54 @@
+:root {
+	// /* -- UNIVERSAL sizing -- */
+	// --size-unit: 1.6rem;
+	// --size-xxs: calc(0.25 * var(--size-unit));
+	// --size-xs: calc(0.5 * var(--size-unit));
+	// --size-sm: calc(0.75 * var(--size-unit));
+	// --size-md: calc(1.25 * var(--size-unit));
+	// --size-lg: calc(2 * var(--size-unit));
+	// --size-xl: calc(3.25 * var(--size-unit));
+	// --size-xxl: calc(5.25 * var(--size-unit));
+
+	/* -- GAPS -- */
+	--gap-sm: 1.4rem;
+	--gap-md: 3.2rem;
+	--gap-lg: 5.2rem;
+	--gap-xl: 7.2rem;
+
+	/* -- MARGINS -- */
+	--margin-section: 15rem;
+	@include respond-to(large) {
+		--margin-section: 10rem;
+	}
+
+	/* -- TEXT -- */
+	--default-font-size: 1.6rem;
+
+	/* -- SVGs Size -- */
+	--SVG-size-sm: 2.2rem;
+	--SVG-size: 4.2rem;
+
+	/* -- CONTENT Padding -- */
+	--ct-pad-y: 3.2rem;
+	--ct-pad-x: 6.2rem;
+
+	@include respond-to(large) {
+		--ct-pad-y: 2.2rem;
+		--ct-pad-x: 4.2rem;
+	}
+
+	/* -- CONTENT Padding -- */
+	--mb-sm: 2rem;
+	--mb-md: 3.2rem;
+	--mb-lg: 4.6rem;
+}
+
+.mb-sm {
+	margin-bottom: 1.4rem;
+}
+.mb-md {
+	margin-bottom: 2.2rem;
+}
+.mb-lg {
+	margin-bottom: 3.6rem;
+}

@@ -1,0 +1,70 @@
+.story {
+	&__pictures {
+		background-color: $color-primary;
+		grid-column: center-start / col-end 4;
+
+		background-image: linear-gradient(
+				to left bottom,
+				rgba($color-primary, 0.2),
+				rgba($color-primary-dark, 0.5)
+			),
+			url(../img/back.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		align-items: center;
+
+		@include respond-to(xlarge) {
+			grid-column: 1 / -1;
+			padding: 6rem;
+		}
+		@include respond-to(large) {
+			padding: 4.8vw;
+		}
+	}
+	&__img-1 {
+		width: 100%;
+
+		grid-column: 2 / 6;
+		grid-row: 2 / 6;
+
+		box-shadow: $boxshadow-dark-1;
+
+		@include respond-to(xlarge) {
+			// grid-column: 1 / 7;
+			// grid-row: 1 / 5;
+		}
+	}
+	&__img-2 {
+		width: 110%;
+		grid-column: 4 / -1;
+		grid-row: 4 / 6;
+
+		box-shadow: $boxshadow-light-1;
+		z-index: 9;
+
+		@include respond-to(xlarge) {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		background-color: $color-grey-light-1;
+		grid-column: col-start 5 / col-end 8;
+
+		padding: var(--ct-pad-y) var(--ct-pad-x);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+
+		@include respond-to(xlarge) {
+			grid-column: 1 / -1;
+		}
+	}
+}
