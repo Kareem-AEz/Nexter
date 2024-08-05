@@ -4,7 +4,7 @@ This project is the final project from [Jonas Schmedtmann's Advanced CSS and Sas
 
 In addition to mastering grid layouts, the course covers SVG icons, the BEM methodology, responsive design principles, and various CSS tricks and tools. These elements help create visually appealing, well-structured, and highly maintainable websites.
 
-View the live project at []().
+View the live project at [kareem-aez.github.io/Nexter](https://kareem-aez.github.io/Nexter/).
 
 ## Grid Layout
 
