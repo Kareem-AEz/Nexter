@@ -47,6 +47,14 @@ CSS Grid offers a powerful alternative to traditional layout methods. Its two-di
 
 This Sass snippet provides a robust and flexible media query management system. By defining breakpoints as a map within the `$breakpoints` variable, you establish a centralized location for managing screen sizes. The `respond-to` mixin encapsulates the logic for creating media queries based on these breakpoints, offering control over both `max-width` and `min-width` scenarios. This approach promotes code reusability, maintainability, and consistency across your project. Including error handling for invalid breakpoints and directions enhances the reliability of the mixin.
 ```scss
+// BREAK POINTS
+$breakpoints: (
+	"xxxlarge": 90em,
+	"xxlarge": 75em,
+	"xlarge": 57.5em,
+	"large": 45.25em,
+);
+
 /* Media Qurey Manager */
 @mixin respond-to($breakpoint, $direction: max) {
 	$breakpoint-value: map-get(
