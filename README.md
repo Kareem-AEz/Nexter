@@ -117,6 +117,6 @@ This project leverages npm (Node Package Manager) for dependency management and 
 
 - [x] Create a functional and responsive website navigation.
 - [x] Make the page 100% responsive (< 400px).
-- [] Optimize images.
-- [] Redesign gallery section for devices with smaller screens.
+- [ ] Optimize images.
+- [ ] Redesign gallery section for devices with smaller screens.
 - [x] Optimize for Full HD screens and higher.
